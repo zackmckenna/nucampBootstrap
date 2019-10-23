@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)https://medium.com/media/82728a452d9a99de5e48249310193676 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Composable utilities – Medium</title><meta name="description" content="Composable utilities"><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!--<base target="_blank">--><base href="." target="_blank"><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="./00d32233e855ef1903ba6a50b7d191d5.js" charset="utf-8"></script><link rel="stylesheet" href="./gist-embed-123720f37c57ce9a8f29de081c38ed61.css"><div id="gist39580059" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-composables-js" class="file">
+    
+
+  <div itemprop="text" class="Box-body p-0 blob-wrapper data type-javascript ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-composables-js-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-composables-js-LC1" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">curry</span> <span class="pl-k">=</span> <span class="pl-smi">fn</span> <span class="pl-k">=&gt;</span> (<span class="pl-k">...</span><span class="pl-v">args</span>) <span class="pl-k">=&gt;</span> <span class="pl-smi">fn</span>.<span class="pl-en">bind</span>(<span class="pl-c1">null</span>, <span class="pl-k">...</span>args);</td>
+      </tr>
+      <tr>
+        <td id="file-composables-js-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-composables-js-LC2" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-composables-js-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-composables-js-LC3" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">map</span> <span class="pl-k">=</span> <span class="pl-en">curry</span>((<span class="pl-smi">fn</span>, <span class="pl-smi">arr</span>) <span class="pl-k">=&gt;</span> <span class="pl-smi">arr</span>.<span class="pl-en">map</span>(fn));</td>
+      </tr>
+      <tr>
+        <td id="file-composables-js-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-composables-js-LC4" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-composables-js-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-composables-js-LC5" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">join</span> <span class="pl-k">=</span> <span class="pl-en">curry</span>((<span class="pl-smi">str</span>, <span class="pl-smi">arr</span>) <span class="pl-k">=&gt;</span> <span class="pl-smi">arr</span>.<span class="pl-c1">join</span>(str));</td>
+      </tr>
+      <tr>
+        <td id="file-composables-js-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-composables-js-LC6" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-composables-js-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-composables-js-LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">toLowerCase</span> <span class="pl-k">=</span> <span class="pl-smi">str</span> <span class="pl-k">=&gt;</span> <span class="pl-smi">str</span>.<span class="pl-c1">toLowerCase</span>();</td>
+      </tr>
+      <tr>
+        <td id="file-composables-js-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-composables-js-LC8" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-composables-js-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-composables-js-LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-k">const</span> <span class="pl-c1">split</span> <span class="pl-k">=</span> <span class="pl-en">curry</span>((<span class="pl-smi">splitOn</span>, <span class="pl-smi">str</span>) <span class="pl-k">=&gt;</span> <span class="pl-smi">str</span>.<span class="pl-c1">split</span>(splitOn));</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/ericelliott/00d32233e855ef1903ba6a50b7d191d5/raw/be77a84f7be6f4b02a5bc6a5855a6f0e48763d1c/composables.js" style="float:right">view raw</a>
+        <a href="https://gist.github.com/ericelliott/00d32233e855ef1903ba6a50b7d191d5#file-composables-js">composables.js</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200; if (document) {document.domain = document.domain;}function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height);var elements = document.getElementsByClassName("gist-data"); for (var i = 0; i < elements.length; i++) {elements[i].style.overflow = "visible"}resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {try {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);} catch(error) {console.log('maybeResize error: ', error)}}maybeResize();</script></body></html>
