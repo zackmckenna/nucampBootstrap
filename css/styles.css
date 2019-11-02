@@ -38,3 +38,11 @@ h2 {
 
 .carousel {
   border: solid #5637DD; }
+
+#reserveModal .modal-header {
+  background-color: #17A2B8;
+  color: white; }
+
+#loginModal .modal-header {
+  background-color: #901CAD;
+  color: white; }
